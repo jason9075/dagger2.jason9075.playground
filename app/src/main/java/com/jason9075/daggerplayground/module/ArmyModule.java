@@ -14,13 +14,13 @@ import dagger.Provides;
 public class ArmyModule {
 
     @Provides
-    Knight provideKnight(Sword sword, Shield shield) {
-        return new Knight(sword, shield);
+    Knight provideKnight() {
+        return new Knight(new Sword(), new Shield());
     }
 
     @Provides
-    Archer provideArcher(Bow bow) {
-        return new Archer(bow);
+    Archer provideArcher() {
+        return new Archer(new Bow());
     }
 
     @Provides
